@@ -13,7 +13,7 @@ const initialState: TasksState = {
       description: 'Study JavaScript',
       priority: enums.Priority.NORMAL,
       status: enums.Status.COMPLETED,
-      title: 'Study Hard'
+      title: 'Study Hard JavaScript'
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const initialState: TasksState = {
       description: 'Study React',
       priority: enums.Priority.IMPORTANT,
       status: enums.Status.PENDENT,
-      title: 'practice different situation'
+      title: 'practice different situation TypeScript'
     }
   ]
 }
