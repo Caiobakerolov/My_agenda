@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
 import FilterCard from '../../components/FilterCard'
-import * as S from './styles'
 import { RootReducer } from '../../store'
 import { changeTerm } from '../../store/reducers/filter'
 import * as enums from '../../utils/enums/task'
+import * as S from './styles'
+import { Field } from '../../styles'
 
 const SideBar = () => {
   const dispatch = useDispatch()
@@ -12,7 +13,7 @@ const SideBar = () => {
   return (
     <S.Aside>
       <div>
-        <S.Field
+        <Field
           type="text"
           placeholder="Search"
           value={term}

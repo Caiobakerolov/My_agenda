@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+
 import * as S from './styles'
+import { BtnSave } from '../../styles'
 import { remover, edit } from '../../store/reducers/tasks'
 import TaskClass from '../../models/Task'
 
@@ -45,7 +47,7 @@ const Task = ({
       <S.BarActions>
         {isEditing ? (
           <>
-            <S.BtnSave
+            <BtnSave
               onClick={() => {
                 dispatch(
                   edit({
@@ -60,7 +62,7 @@ const Task = ({
               }}
             >
               Save
-            </S.BtnSave>
+            </BtnSave>
             <S.BtnCancelRemove onClick={cancelEdition}>
               Cancel
             </S.BtnCancelRemove>
