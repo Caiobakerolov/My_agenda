@@ -1,13 +1,12 @@
 import styled, { createGlobalStyle } from 'styled-components'
 import variables from './variables'
-import { Btn } from '../components/Task/styles'
 
 const StyleGlobal = createGlobalStyle`
   * {
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     list-style:none;
   }
 `
@@ -39,6 +38,18 @@ export const Field = styled.input`
   border-color: #666;
   width: 100%;
   border: 1px solid #5e5e5e;
+`
+
+export const Btn = styled.button`
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: ${variables.darkBlue};
+  border-radius: 8px;
+  margin-right: 8px;
 `
 
 export const BtnSave = styled(Btn)`

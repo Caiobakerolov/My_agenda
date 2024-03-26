@@ -6,7 +6,6 @@ import { BtnSave, MainContainer, Title } from '../../styles'
 import { Field } from '../../styles'
 import { Form, Options, Option } from './styles'
 import * as enums from '../../utils/enums/task'
-import Task from '../../models/Task'
 import { register } from '../../store/reducers/tasks'
 
 const Forms = () => {
@@ -18,15 +17,15 @@ const Forms = () => {
 
   const registerTask = (event: FormEvent) => {
     event.preventDefault()
-    const taskAdd = new Task(
-      title,
-      priority,
-      enums.Status.PENDENT,
-      description,
-      9
-    )
 
-    dispatch(register(taskAdd))
+    dispatch(
+      register({
+        title,
+        priority,
+        description,
+        status: enums.Status.PENDENT
+      })
+    )
     navigate('/')
   }
 
